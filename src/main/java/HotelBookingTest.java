@@ -29,8 +29,12 @@ public class HotelBookingTest {
         driver.get("https://www.cleartrip.com/");
         hotelLink.click();
 
+        localityTextBox.clear();
         localityTextBox.sendKeys("Indiranagar, Bangalore");
 
+        List<WebElement> lst=driver.findElements(By.xpath("//*[@id='ui-id-1']/li/a"));
+        lst.get(0).click();
+        
         new Select(travellerSelection).selectByVisibleText("1 room, 2 adults");
         searchButton.click();
 
