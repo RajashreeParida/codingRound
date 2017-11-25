@@ -17,7 +17,8 @@ public class SignInTest {
         driver.get("https://www.cleartrip.com/");
         waitFor(2000);
 
-        driver.findElement(By.linkText("Your trips")).click();
+       // driver.findElement(By.linkText("Your trips")).click();
+        driver.findElement(By.xpath("//a/span[text()='Your trips']")).click();
         driver.findElement(By.id("SignIn")).click();
 
         driver.findElement(By.id("signInButton")).click();
